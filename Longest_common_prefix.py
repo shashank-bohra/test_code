@@ -6,21 +6,25 @@ def long_comm_pre(a):
     
     #sorting the array
     a.sort()
-    print("after sorting", a)
+    print("After sorting", a)
     
     #number of elements in array
     x = len(a)
-    print('array len is ',x)
+    print('Array len is ',x)
     
     if(x == 0):
         return "No Element to process"
     
+    #finding minimum length of the element in array
+    
     min_len = len(a[0])
+    
     for ml in range(1,x):
         if(len(a[ml]) < min_len):
             min_len = len(a[ml])
     
-    print("min_len is ", min_len)
+    # mimimum length is used to ristrict the loop to find commom prefix
+    print("Min length is ", min_len) 
     
     #e is used to traverse element in array
     e = 0
@@ -37,11 +41,11 @@ def long_comm_pre(a):
         c = c+1 
     result = a[0][0:c]
     if len(result) == 0:
-        return"No common prefix"
+        return"No Common Prefix"
     return result
     
 
 ip = ["kuk","kuko", "kukini","kukazu","kuksu", "kuksui"]
 #ip = ["asd","xsd", "we"]
 #ip = []
-print("common prefix is ", long_comm_pre(ip))
+print("Common Prefix is ", long_comm_pre(ip))
