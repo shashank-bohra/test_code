@@ -4,7 +4,7 @@
 
 def long_comm_pre(a):
     
-    #sorting the array
+    #sorting the elements in array as per their ASCII values
     a.sort()
     print("After sorting", a)
     
