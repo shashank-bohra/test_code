@@ -32,16 +32,12 @@ def long_comm_pre(a):
     print("Min length is ", min_len) 
     
     #e is used to traverse element in array
-    e = 0
+    e = 1
     #c is used to traverse the index in the element in array
     c = 0
     
     # looping to check if characters in first element are matching with character with other elements of array 
-    while(e < x and c<min_len and a[0][c] == a[e+1][c]):
-        print("e =", e, " c =",c)
-        print("a[0][c] is ", a[0][c])
-        print("a[e+1][c] is ", a[e+1][c])
-        
+    while(e < x and c<min_len and a[0][c] == a[e][c]):
         e= e+1
         c = c+1 
     result = a[0][0:c]
