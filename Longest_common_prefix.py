@@ -1,11 +1,14 @@
-# my code prefix
-# to find longest common prefix
+# Developer     : Shashank 
+# Date          : 2022-07-19
+# Object        : to find longest common prefix
 
 def long_comm_pre(a):
+    
+    #sorting the array
     a.sort()
     print("after sorting", a)
     
-    #element in array
+    #number of elements in array
     x = len(a)
     print('array len is ',x)
     
@@ -19,12 +22,12 @@ def long_comm_pre(a):
     
     print("min_len is ", min_len)
     
-    #e is for element
+    #e is used to traverse element in array
     e = 0
-    #c is for character
+    #c is used to traverse the index in the element in array
     c = 0
     
-     
+    # looping to check if characters in first element are matching with character with other elements of array 
     while(e < x and c<min_len and a[0][c] == a[e+1][c]):
         print("e =", e, " c =",c)
         print("a[0][c] is ", a[0][c])
@@ -32,10 +35,10 @@ def long_comm_pre(a):
         
         e= e+1
         c = c+1 
-    ans = a[0][0:c]
-    if len(ans) == 0:
+    result = a[0][0:c]
+    if len(result) == 0:
         return"No common prefix"
-    return ans
+    return result
     
 
 ip = ["kuk","kuko", "kukini","kukazu","kuksu", "kuksui"]
