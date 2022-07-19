@@ -12,8 +12,13 @@ def long_comm_pre(a):
     x = len(a)
     print('Array len is ',x)
     
+    # if the array is empty then no element to process
     if(x == 0):
         return "No Element to process"
+    
+    # if the array has only one element then return the same
+    if(x == 1):
+        return(a[0])
     
     #finding minimum length of the element in array
     
